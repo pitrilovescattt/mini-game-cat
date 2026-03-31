@@ -1,0 +1,57 @@
+body {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 18px;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+#game-area {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+}
+
+.cat {
+  position: absolute;
+  width: 80px;
+  cursor: pointer;
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background: #ff8fab;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.combo {
+  position: absolute;
+  font-size: 18px;
+  animation: boom 0.5s forwards;
+}
+
+@keyframes boom {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
